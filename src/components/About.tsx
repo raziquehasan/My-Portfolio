@@ -1,4 +1,5 @@
 import { User, GraduationCap, Code, Target } from "lucide-react";
+import profileImage from "@/assets/profile.png";
 
 const About = () => {
   return (
@@ -10,6 +11,17 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex justify-center mb-8 md:mb-0">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-teal via-purple to-pink rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <img 
+                src={profileImage} 
+                alt="Razique Hasan - Full-Stack Developer" 
+                className="relative rounded-2xl w-80 h-80 object-cover shadow-2xl"
+              />
+            </div>
+          </div>
+          
           <div className="space-y-6">
             <div className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <div className="flex items-start gap-4">
@@ -38,9 +50,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="space-y-6">
             <div className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-pink/20">

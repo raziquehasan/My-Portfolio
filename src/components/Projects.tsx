@@ -4,20 +4,28 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "Resume Builder",
-      description: "Dynamic resume builder with LaTeX export support, user authentication, and Firebase data persistence.",
-      tech: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
-      github: "https://github.com/raziquehasan",
-      live: "#",
+      title: "Scatch - Bag Selling E-commerce",
+      description: "Full-stack e-commerce platform for premium bag collections with user authentication, cart management, and secure checkout.",
+      tech: ["Node.js", "Express", "MongoDB", "EJS"],
+      github: "https://github.com/raziquehasan/scatch",
+      live: "https://scatch-7yje.onrender.com/",
       gradient: "from-teal to-purple",
     },
     {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce platform handling 1000+ daily transactions with Stripe integration and optimized backend.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/raziquehasan",
-      live: "#",
+      title: "BEU Syllabus Web Application",
+      description: "Comprehensive syllabus management platform for CDAC with course details, curriculum, and resource management.",
+      tech: ["React", "Node.js", "MongoDB", "TailwindCSS"],
+      github: "https://github.com/raziquehasan/syllabus-cdac",
+      live: "https://syllabus-wvoa.onrender.com/",
       gradient: "from-purple to-pink",
+    },
+    {
+      title: "AI Cyber Guardian (PARANOX 2.0)",
+      description: "Advanced AI-powered cybersecurity platform for threat detection, monitoring, and automated security responses.",
+      tech: ["React", "AI/ML", "TailwindCSS", "TypeScript"],
+      github: "https://github.com/raziquehasan/PARANOX2.0-FRONTEND",
+      live: "https://paranox-2-0-frontend.vercel.app/",
+      gradient: "from-pink to-teal",
     },
     {
       title: "AI Resume Analyzer",
@@ -25,7 +33,7 @@ const Projects = () => {
       tech: ["MongoDB", "Express", "React", "Node.js", "AI/ML"],
       github: "https://github.com/raziquehasan",
       live: "#",
-      gradient: "from-pink to-teal",
+      gradient: "from-teal to-purple",
     },
     {
       title: "Job Portal",
@@ -33,7 +41,7 @@ const Projects = () => {
       tech: ["React", "Node.js", "MongoDB", "Firebase"],
       github: "https://github.com/raziquehasan",
       live: "#",
-      gradient: "from-teal to-purple",
+      gradient: "from-purple to-pink",
     },
     {
       title: "Uber Clone",
@@ -41,7 +49,7 @@ const Projects = () => {
       tech: ["Node.js", "MongoDB", "Express", "Socket.io"],
       github: "https://github.com/raziquehasan",
       live: "#",
-      gradient: "from-purple to-pink",
+      gradient: "from-pink to-teal",
     },
     {
       title: "Zomato Clone",
@@ -49,7 +57,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "TailwindCSS"],
       github: "https://github.com/raziquehasan",
       live: "#",
-      gradient: "from-pink to-teal",
+      gradient: "from-teal to-purple",
     },
   ];
 
