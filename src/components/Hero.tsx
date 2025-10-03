@@ -60,7 +60,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in">
-            <a href="/Razique_Resume.pdf" download>
+            <a href="/RESUMES.pdf" download="Razique_Hasan_Resume.pdf">
               <Button variant="hero" size="lg" className="group">
                 <Download className="group-hover:animate-bounce" />
                 Download Resume

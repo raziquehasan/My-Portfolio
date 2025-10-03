@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# Razique Hasan - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my journey as a Full-Stack Developer and AI/ML enthusiast.
 
-**URL**: https://lovable.dev/projects/d9b3cc9d-e304-48f5-8f77-bb5ad974ee7b
+## 🚀 About
 
-## How can I edit this code?
+This is my personal portfolio website built to showcase my projects, skills, and experience as a 3rd-year Computer Science student specializing in Full-Stack Development, AI/ML, and Open Source contributions.
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+This project is built with modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d9b3cc9d-e304-48f5-8f77-bb5ad974ee7b) and start prompting.
+- **React 18** - Frontend library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Modern UI components
+- **React Router** - Client-side routing
+- **Lucide React** - Beautiful icons
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏃‍♂️ Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Make sure you have Node.js installed on your machine. You can install it using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd razique-visions
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and visit `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+This project can be deployed to any static hosting service like:
 
-This project is built with:
+- Vercel
+- Netlify
+- GitHub Pages
+- Firebase Hosting
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Simply run `npm run build` and deploy the `dist` folder.
 
-## How can I deploy this project?
+## 📱 Features
 
-Simply open [Lovable](https://lovable.dev/projects/d9b3cc9d-e304-48f5-8f77-bb5ad974ee7b) and click on Share -> Publish.
+- **Responsive Design** - Works perfectly on all devices
+- **Modern UI** - Clean and professional interface
+- **Fast Performance** - Optimized with Vite
+- **Type Safety** - Built with TypeScript
+- **Accessible** - Following web accessibility standards
 
-## Can I connect a custom domain to my Lovable project?
+## 📧 Contact
 
-Yes, you can!
+Feel free to reach out if you have any questions or would like to collaborate!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Email**: [Your Email]
+- **LinkedIn**: [Your LinkedIn]
+- **GitHub**: [Your GitHub]
+- **Twitter**: @razique_hasan
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+Built with ❤️ by Razique Hasan
