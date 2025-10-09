@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +12,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Simple validation
@@ -25,13 +27,45 @@ const Contact = () => {
       return;
     }
 
-    // Here you would typically send the form data to a backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+    setIsLoading(true);
 
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_default';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_default';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          title: `New Contact Form Message from ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      toast({
+        title: "Message Sent Successfully! ✅",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
+      console.error('Error details:', error.text, error.status);
+      toast({
+        title: "Failed to Send Message ❌",
+        description: `Error: ${error.text || error.message || 'Something went wrong'}. Please try again or contact me directly at hasanrazique@gmail.com`,
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -52,7 +86,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Form */}
           <div className="glass-card p-8">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
@@ -87,68 +121,11 @@ const Contact = () => {
                   className="bg-secondary/50 border-border resize-none"
                 />
               </div>
-              <Button type="submit" variant="hero" className="w-full">
+              <Button type="submit" variant="hero" className="w-full" disabled={isLoading}>
                 <Send />
-                Send Message
+                {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <div className="glass-card p-8">
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <a
-                  href="mailto:hasanrazique@gmail.com"
-                  className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30 hover:bg-teal/20 transition-all group"
-                >
-                  <div className="p-3 rounded-lg bg-teal/20">
-                    <Mail className="w-6 h-6 text-teal" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium group-hover:text-teal transition-colors">
-                      hasanrazique@gmail.com
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://github.com/raziquehasan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30 hover:bg-purple/20 transition-all group"
-                >
-                  <div className="p-3 rounded-lg bg-purple/20">
-                    <Github className="w-6 h-6 text-purple" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">GitHub</p>
-                    <p className="font-medium group-hover:text-purple transition-colors">
-                      @raziquehasan
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/razique-hasan-73a2832a2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30 hover:bg-pink/20 transition-all group"
-                >
-                  <div className="p-3 rounded-lg bg-pink/20">
-                    <Linkedin className="w-6 h-6 text-pink" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="font-medium group-hover:text-pink transition-colors">
-                      Razique Hasan
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

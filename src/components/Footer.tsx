@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Code } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,6 +39,15 @@ const Footer = () => {
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
+            </a>
+            <a
+              href="https://leetcode.com/u/Razique-123/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg hover:bg-orange/20 transition-all"
+              aria-label="LeetCode"
+            >
+              <Code className="w-5 h-5" />
             </a>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Code2, Database, Cloud, Cpu } from "lucide-react";
+import { Code2, Database, Cloud, Cpu, Settings } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -18,13 +18,19 @@ const Skills = () => {
       title: "Database & Cloud",
       icon: Database,
       color: "pink",
-      skills: ["MongoDB", "Firebase", "MySQL", "AWS", "Docker"],
+      skills: ["MongoDB", "Firebase", "MySQL", "AWS"],
     },
     {
-      title: "Tools & DSA",
+      title: "DevOps & Tools",
+      icon: Settings,
+      color: "orange",
+      skills: ["Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "GitHub Actions", "Linux", "CMake"],
+    },
+    {
+      title: "DSA & Problem Solving",
       icon: Cloud,
       color: "teal",
-      skills: ["Git", "Postman", "Docker", "DSA in C++", "LeetCode (100+)"],
+      skills: ["DSA in C++", "LeetCode (100+)", "Problem Solving", "Algorithms"],
     },
   ];
 
@@ -36,7 +42,7 @@ const Skills = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-teal via-purple to-pink mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {skillCategories.map((category, idx) => {
             const Icon = category.icon;
             return (

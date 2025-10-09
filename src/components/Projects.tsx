@@ -4,6 +4,22 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: "PYQ Deck - BEU Student Portal",
+      description: "A comprehensive PYQ deck app that helps all BEU students with previous year question solutions for all semesters.",
+      tech: ["React", "Node.js", "MongoDB", "TailwindCSS"],
+      github: "https://github.com/raziquehasan",
+      live: "https://pyqdeck.vercel.app/login",
+      gradient: "from-blue to-cyan",
+    },
+    {
+      title: "One2Z Solutions",
+      description: "Complete business solutions platform offering comprehensive services and innovative technology solutions for modern enterprises.",
+      tech: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+      github: "https://github.com/raziquehasan/one2z-solutions",
+      live: "https://one2zsolutions.vercel.app/",
+      gradient: "from-green to-blue",
+    },
+    {
       title: "Scatch - Bag Selling E-commerce",
       description: "Full-stack e-commerce platform for premium bag collections with user authentication, cart management, and secure checkout.",
       tech: ["Node.js", "Express", "MongoDB", "EJS"],
@@ -32,7 +48,7 @@ const Projects = () => {
       description: "Built at ABES Institute Hackathon - MERN stack platform delivering personalized feedback and insights for job readiness.",
       tech: ["MongoDB", "Express", "React", "Node.js", "AI/ML"],
       github: "https://github.com/raziquehasan",
-      live: "#",
+      live: "https://resume-analyzer-ai-bot.vercel.app/",
       gradient: "from-teal to-purple",
     },
     {
@@ -50,14 +66,6 @@ const Projects = () => {
       github: "https://github.com/raziquehasan",
       live: "#",
       gradient: "from-pink to-teal",
-    },
-    {
-      title: "Zomato Clone",
-      description: "Food delivery platform with restaurant listings, cart management, and order tracking.",
-      tech: ["React", "Firebase", "TailwindCSS"],
-      github: "https://github.com/raziquehasan",
-      live: "#",
-      gradient: "from-teal to-purple",
     },
   ];
 
