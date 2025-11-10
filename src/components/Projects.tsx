@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: "Samyak ERP - SIH Hackathon Project",
+      description: "Smart Academic Management System built for SIH hackathon. Secured 2nd position in college internal round. Comprehensive ERP solution for educational institutions with advanced features.",
+      tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS"],
+      github: "https://github.com/raziquehasan/SIH",
+      live: "https://samyak-erp.vercel.app/",
+      gradient: "from-orange to-red",
+    },
+    {
       title: "PYQ Deck - BEU Student Portal",
       description: "A comprehensive PYQ deck app that helps all BEU students with previous year question solutions for all semesters.",
       tech: ["React", "Node.js", "MongoDB", "TailwindCSS"],
