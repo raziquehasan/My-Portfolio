@@ -53,6 +53,9 @@ const Hero = () => {
                 <span className="animate-pulse">|</span>
               </p>
             </div>
+            <p className="text-lg md:text-xl text-muted-foreground/80 max-w-3xl mx-auto mt-4 animate-fade-in">
+              Full-Stack Developer building real-time, production-grade applications with Java Spring Boot & React.
+            </p>
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
