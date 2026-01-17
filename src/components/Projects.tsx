@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: "ZapChat — Real-Time Chat & Calling SaaS Platform",
+      description: "A production-grade WhatsApp-style real-time chat and calling platform with voice/video calling, real-time messaging, groups, notifications, and media sharing.",
+      tech: ["React", "Java", "Spring Boot", "MongoDB", "WebRTC", "WebSockets", "Docker", "Cloudinary"],
+      github: "https://github.com/raziquehasan/ZapChat",
+      live: "https://chatapp-eta-seven.vercel.app/",
+      gradient: "from-purple to-pink",
+      featured: true,
+    },
+    {
       title: "Samyak ERP - SIH Hackathon Project",
       description: "Smart Academic Management System built for SIH hackathon. Secured 2nd position in college internal round. Comprehensive ERP solution for educational institutions with advanced features.",
       tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS"],
@@ -92,18 +101,24 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="glass-card p-6 hover:scale-105 transition-all duration-300 group"
+              className="glass-card p-6 hover:scale-105 transition-all duration-300 group relative"
             >
               <div className={`h-2 w-full bg-gradient-to-r ${project.gradient} rounded-full mb-4`}></div>
-              
+
+              {project.featured && (
+                <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-purple to-pink rounded-full text-xs font-semibold">
+                  ⭐ Featured
+                </div>
+              )}
+
               <h3 className="text-2xl font-bold mb-3 group-hover:gradient-text transition-all">
                 {project.title}
               </h3>
-              
+
               <p className="text-muted-foreground mb-4 line-clamp-3">
                 {project.description}
               </p>
-              
+
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIdx) => (
                   <span
@@ -114,7 +129,7 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              
+
               <div className="flex gap-3">
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
                   <Button variant="glass" size="sm" className="w-full">

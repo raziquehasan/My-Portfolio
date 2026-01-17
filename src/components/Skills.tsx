@@ -12,19 +12,19 @@ const Skills = () => {
       title: "Backend",
       icon: Cpu,
       color: "purple",
-      skills: ["Node.js", "Express", "Python", "C++", "C", "Gin"],
+      skills: ["Node.js", "Express", "Java", "Spring Boot", "Python", "C++", "C", "Gin", "Redis"],
     },
     {
       title: "Database & Cloud",
       icon: Database,
       color: "pink",
-      skills: ["MongoDB", "Firebase", "MySQL", "AWS"],
+      skills: ["MongoDB", "Firebase", "MySQL", "AWS", "Cloudinary"],
     },
     {
       title: "DevOps & Tools",
       icon: Settings,
       color: "orange",
-      skills: ["Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "GitHub Actions", "Linux", "CMake"],
+      skills: ["Docker", "Kubernetes", "Jenkins", "CI/CD Pipelines", "Git", "GitHub Actions", "Linux", "CMake", "WebRTC", "WebSockets"],
     },
     {
       title: "DSA & Problem Solving",
