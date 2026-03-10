@@ -3,6 +3,14 @@ import { Award, Trophy, GitBranch, Star } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Developer Intern",
+      organization: "SwitchiT – AI Powered Professional Networking Platform",
+      period: "Feb 2026 – Present",
+      description: "Contributing to an AI-powered networking platform for anonymous job switching. Developed scalable REST APIs with JWT authentication and optimized PostgreSQL schemas. Managed multi-service architecture using Docker and Docker Compose, and assisted in AWS deployment and CI/CD pipeline automation.",
+      icon: GitBranch,
+      color: "teal",
+    },
+    {
       title: "Full Stack Development Intern",
       organization: "Centre for Development of Advanced Computing (C-DAC), Patna",
       period: "June 2025",

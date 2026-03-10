@@ -12,13 +12,13 @@ const Skills = () => {
       title: "Backend",
       icon: Cpu,
       color: "purple",
-      skills: ["Node.js", "Express", "Java", "Spring Boot", "Python", "C++", "C", "Gin", "Redis"],
+      skills: ["Node.js", "Express", "Java", "Spring Boot", "Python", "JWT", "C++", "C", "Gin", "Redis"],
     },
     {
       title: "Database & Cloud",
       icon: Database,
       color: "pink",
-      skills: ["MongoDB", "Firebase", "MySQL", "AWS", "Cloudinary"],
+      skills: ["MongoDB", "Firebase", "PostgreSQL", "MySQL", "AWS", "Cloudinary"],
     },
     {
       title: "DevOps & Tools",
